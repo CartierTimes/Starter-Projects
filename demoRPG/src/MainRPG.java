@@ -24,7 +24,7 @@ public class MainRPG {
         //Clause to make sure the game will be visible
         window.setVisible(true);
 
-        //Making the game screen here
+        //***Making the game screen here
         RPGPanel panel = new RPGPanel();
 
         //Adding it to the window
@@ -35,5 +35,8 @@ public class MainRPG {
 
         //Set this so the screen will be at the middle (NOTE: Will develop fullscreen later)
         window.setLocationRelativeTo(null);
+
+        panel.startGame();
+
     }
 }

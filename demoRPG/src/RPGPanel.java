@@ -44,7 +44,40 @@ public class RPGPanel extends JPanel implements Runnable {
     }
 
     @Override
-    public void run() { //Creates the Threads for the runnable
-    
+    public void run() { //Creates the Threads for the runnable. Updates information in real time
+        while (gameThread != null) {
+            //Update Information
+            update();
+
+            //Repaint information (Confusing but will make sense)
+            repaint();
+        }
     }
+
+    //Creating this to update information real time in the game
+    public void update() {
+
+    }
+
+    //Made this for the background information -- Graphics
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+
+        //Assembling the graphics (Made in 2D)
+        Graphics2D g2 = (Graphics2D) g;
+        g2.setColor(Color.white);
+        g2.fillRect(100, 100, tileSize, tileSize);
+        g2.dispose(); //This will save memory
+    }
+
+
+
+
+
+
+
+
+
+
+
 }
