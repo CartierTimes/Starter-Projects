@@ -1,7 +1,9 @@
 import javax.swing.JPanel;
+
+//For Colour and dimension
 import java.awt.*;
 
-public class RPGPanel extends JPanel {
+public class RPGPanel extends JPanel implements Runnable {
 
     //Settings for the Screen
     final int originalTileSize = 16; //Keep this unmodified
@@ -11,7 +13,7 @@ public class RPGPanel extends JPanel {
      * The screen size for the game
      * Each of these can be modified to achieve a better resolution (pixels)
      * WARNING: Adjusting it might run the chance of having to
-     * adjust other pixels (i.e) Sprites and etc.
+     * adjust other pixels (i.e) Sprites, etc.
      */
     final int tileSize = originalTileSize * scale; //Final tile size on the screen
     final int maxScreenCol = 16;
@@ -21,7 +23,8 @@ public class RPGPanel extends JPanel {
     final int screenWidth = tileSize * maxScreenCol;
     final int screenHeight = tileSize * maxScreenRow;
 
-    //Constuctor to establish a proper link
+
+    //Constructor to establish a proper link
     public RPGPanel() {
 
         //Established the Width and height right here
@@ -32,5 +35,16 @@ public class RPGPanel extends JPanel {
         this.setDoubleBuffered(true);
     }
 
+    //Timer of frames
+    Thread gameThread;
+    //Creating this will start the game properly
+    public void startGame() {
+        gameThread = new Thread(this);
+        gameThread.start(); //This will call the run method
+    }
 
+    @Override
+    public void run() { //Creates the Threads for the runnable
+    
+    }
 }

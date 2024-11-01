@@ -19,7 +19,7 @@ public class MainRPG {
         window.setResizable(false);
 
         //Title of the game
-        window.setTitle("Adventures of Jimmy");
+        window.setTitle("Adventures of Jimbo");
 
         //Clause to make sure the game will be visible
         window.setVisible(true);
@@ -33,6 +33,7 @@ public class MainRPG {
         //This will keep it to the size as constructed (See RPGPanel.class for more details)
         window.pack();
 
+        //Set this so the screen will be at the middle (NOTE: Will develop fullscreen later)
         window.setLocationRelativeTo(null);
     }
 }
