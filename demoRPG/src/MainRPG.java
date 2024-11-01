@@ -36,7 +36,9 @@ public class MainRPG {
         //Set this so the screen will be at the middle (NOTE: Will develop fullscreen later)
         window.setLocationRelativeTo(null);
 
+        //Time to play the game
         panel.startGame();
+
 
     }
 }

@@ -19,7 +19,6 @@ public class Movement implements KeyListener {
      */
     @Override
     public void keyTyped(KeyEvent e) {
-
     }
 
     /**
@@ -49,6 +48,7 @@ public class Movement implements KeyListener {
     /**
      * This handles the event of when the key that's
      * being pressed is released
+     * This will reupdate the status of keys back to false.
      * @param e the event to be processed
      */
     @Override
