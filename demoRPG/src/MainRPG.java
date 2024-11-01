@@ -21,14 +21,18 @@ public class MainRPG {
         //Title of the game
         window.setTitle("Adventures of Jimmy");
 
-
-
         //Clause to make sure the game will be visible
         window.setVisible(true);
 
+        //Making the game screen here
+        RPGPanel panel = new RPGPanel();
 
+        //Adding it to the window
+        window.add(panel);
 
+        //This will keep it to the size as constructed (See RPGPanel.class for more details)
+        window.pack();
 
-
+        window.setLocationRelativeTo(null);
     }
 }

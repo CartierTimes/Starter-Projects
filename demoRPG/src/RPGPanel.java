@@ -1,6 +1,7 @@
 import javax.swing.JPanel;
+import java.awt.*;
 
-public class RPGPanel {
+public class RPGPanel extends JPanel {
 
     //Settings for the Screen
     final int originalTileSize = 16; //Keep this unmodified
@@ -19,5 +20,17 @@ public class RPGPanel {
     //Establishing a proper screen after adjustments
     final int screenWidth = tileSize * maxScreenCol;
     final int screenHeight = tileSize * maxScreenRow;
+
+    //Constuctor to establish a proper link
+    public RPGPanel() {
+
+        //Established the Width and height right here
+        this.setPreferredSize(new Dimension(screenWidth, screenHeight));
+        //Testing Background
+        this.setBackground(Color.black);
+        //Buffering.
+        this.setDoubleBuffered(true);
+    }
+
 
 }
