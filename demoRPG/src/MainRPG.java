@@ -18,7 +18,17 @@ public class MainRPG {
         //This to keep the game on one size
         window.setResizable(false);
 
+        //Title of the game
         window.setTitle("Adventures of Jimmy");
+
+
+
+        //Clause to make sure the game will be visible
+        window.setVisible(true);
+
+
+
+
 
     }
 }
