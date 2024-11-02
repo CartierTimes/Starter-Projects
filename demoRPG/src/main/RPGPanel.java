@@ -1,3 +1,7 @@
+package main;
+
+import entity.Player;
+
 import javax.swing.JPanel;
 
 //For Colour and dimension
@@ -28,6 +32,10 @@ public class RPGPanel extends JPanel implements Runnable {
 
     //Instantiate the movement class
     Movement movement = new Movement();
+
+    //Instantiate the Player
+    Player player = new Player(this,movement);
+
 
     //Constructor to establish a proper link
     public RPGPanel() {

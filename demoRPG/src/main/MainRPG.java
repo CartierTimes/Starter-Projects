@@ -1,8 +1,10 @@
+package main;
+
 import javax.swing.JFrame;
 
 
 /**
- * Building a classic RPG game here will classic movements and interactions
+ * Building a classic RPG game here with classic movements and interactions
  * Barebones currently but will implement basic combat and others later
  */
 public class MainRPG {
@@ -30,7 +32,7 @@ public class MainRPG {
         //Adding it to the window
         window.add(panel);
 
-        //This will keep it to the size as constructed (See RPGPanel.class for more details)
+        //This will keep it to the size as constructed (See main.RPGPanel.class for more details)
         window.pack();
 
         //Set this so the screen will be at the middle (NOTE: Will develop fullscreen later)
